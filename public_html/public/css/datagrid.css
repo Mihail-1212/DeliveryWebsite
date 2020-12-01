@@ -1,0 +1,55 @@
+.datagrid {
+	flex-direction: column;
+}
+
+.datagrid table {
+  border-collapse: collapse;
+  min-width: 100%;
+  max-height: 100%;
+}
+
+.datagrid thead,
+.datagrid tbody,
+.datagrid tr {
+/*  display: contents;*/
+}
+
+.datagrid th,
+.datagrid td {
+  padding: 15px;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.datagrid th {
+  position: sticky;
+  top: 0;
+  background: var(--peter-reaver);
+  text-align: left;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: var(--table-color);
+}
+
+.datagrid th:last-child {
+  border: 0;
+}
+
+.datagrid td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--american-river);
+}
+
+.datagrid tr:nth-child(even) td {
+  background: var(--light-white-active);
+}
+
+.datagrid table.cursor_table tbody tr {
+	cursor: pointer;
+}
+
+.datagrid table.cursor_table tbody tr:hover td {
+	background: var(--light-white);
+}

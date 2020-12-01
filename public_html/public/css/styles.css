@@ -1,0 +1,1229 @@
+:root {
+    --nav-color:#006847;
+    --nav-color-dark: #02573c;
+    --link-hover: #00b894;
+    --nav-color-hover: #017a54;
+    --logo-head-color: #fff;
+
+    --car-pink: #eb4d4b;
+
+    --azmarin: #e74c3c;
+    --sun-flower: #f1c40f;
+    --emerald: #2ecc71;
+    --peter-reaver: #3498db;
+
+    --logo-registration-padding: 15px;
+    --logo-registration-padding-hide: 5px;
+    --logo-registration-color: #fff;
+
+    --light-white: #dfe6e9;
+
+    --light-white-active: #f8f6ff;
+
+    --light-gray: #95a5a6;
+    --dark-gray: #7f8c8d;
+
+    --american-river: #636e72;
+    --darkula: #2d3436;
+
+    --registration-margin-right: 20px;
+
+    --table-color: #fff;
+
+    --main-width: 1000px;   /*1300px*/
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
+	appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+}
+
+button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.d-none {
+	display: none;
+}
+
+.button_to_top {
+	position: fixed;
+	display: none;
+	right: 80px;
+	bottom: 50px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border-radius: 7px;
+	z-index: 6;
+	background:
+	    linear-gradient(#fff,#fff),
+	    var(--nav-color);
+	background-position:center;
+	background-size: 5px 50%;
+	background-repeat:no-repeat;
+}
+
+.button_to_top:after {
+	content: "";
+	display: block;
+	margin: auto;
+	border: solid white;
+    border-width: 0 5px 5px 0;
+    height: 30%;
+    width: 30%;
+    transform: rotate(-135deg);
+}
+
+.button_to_top:hover {
+	background:
+	    linear-gradient(#fff,#fff),
+	    var(--link-hover);
+	background-position:center;
+	background-size: 5px 50%;
+	background-repeat:no-repeat;
+}
+
+a {
+	text-decoration: none;
+	color: var(--nav-color);
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;   
+}
+
+a:hover {
+	color: var(--link-hover);
+}
+
+/*custom select start*/
+
+.custom-select {
+	display: inline-block;
+	width: 200px;
+	position: relative;
+	background-color: #fff;
+}
+
+.custom-select select {
+	width: auto;
+ 	display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: inherit;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--darkula) transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--darkula) transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: var(--darkula);
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: inherit;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*end custom select*/
+
+header {
+	display: flex;
+	flex-direction: column;
+}
+
+header>*:not(.nav-head){
+	margin: 0 calc(50% - (var(--main-width) / 2)) !important;
+    max-width: var(--main-width) !important;
+}
+
+header .top_header_title {
+	display: flex;
+	color: var(--darkula);
+	font-size: 10pt;
+}
+
+header .top_header_title .top_header_cities {
+	margin-left: auto;
+}
+
+header .top_header_title .top_header_cities .select-items div,
+header .top_header_title .top_header_cities .select-selected {
+  color: var(--darkula);
+  padding: 0px 8px;
+  border: 1px solid transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+/* Style the arrow inside the select element: */
+header .top_header_title .top_header_cities .select-selected:after {
+  position: absolute;
+  content: "";
+  top: 7px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--darkula) transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+header .top_header_title .top_header_cities .select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--darkula) transparent;
+  top: 0px;
+}
+
+div.logo_head {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--logo-head-color);
+}
+
+div.logo_head .logo {
+	height: 100px;
+	margin-left: var(--registration-margin-right);
+	cursor: pointer;
+}
+
+div.logo_head a {
+	font-weight: 500;
+	font-size: 12pt;
+
+}
+
+div.logo_head .head_menu {
+	margin-left: var(--registration-margin-right);
+	
+}
+
+div.logo_head .head_menu * {
+    font-size: 13pt;
+    letter-spacing: 0px;
+}
+
+div.logo_head .head_menu a:not(:last-child) {
+	margin-right: 15px;
+}
+
+div.logo_head .registration {
+	margin-right: var(--registration-margin-right);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+div.logo_head .registration a{
+	margin-left:-10px;
+	padding: 0 30px;
+	display: inline-block;
+	background-color: var(--nav-color);
+	color: var(--logo-registration-color);
+	border-radius: 30px;
+}
+
+div.logo_head .registration a.profile_header_button{
+	margin-left: -10px;
+	padding: 10px 40px 10px 20px;
+	display: inline-block;
+	background-color: var(--nav-color);
+	cursor: pointer;
+	color: var(--logo-registration-color);
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px;
+	position: relative;
+
+}
+
+div.logo_head .registration a.profile_header_button::after {
+	position: absolute;
+    content: "";
+    top: 40%;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: var(--logo-registration-color) transparent transparent transparent;
+}
+
+
+
+div.logo_head .registration a.profile_header_button:hover{
+	background-color: var(--nav-color-dark);
+}
+
+div.logo_head .registration a.profile_header_button:active {
+	color: var(--logo-registration-color);
+}
+
+
+div.logo_head .registration a:hover {
+	transition: 350ms;
+	color: var(--light-white);
+	background-color: var(--nav-color-dark);
+}
+
+div.logo_head .registration a:active {
+	color: var(--link-hover);
+}
+
+div.logo_head .registration a span {
+	display: inline-block;
+	padding: 15px 0;
+	position: relative;
+	margin: 0;
+	cursor: pointer;
+}
+
+div.logo_head .registration a span:not(:last-child) {
+	padding-right: 15px;
+	margin-right: 15px;
+}
+
+div.logo_head .registration a span:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	height: 14pt;
+	right: 0px;
+	z-index: 5;
+	top: 50%;
+    transform: translateY(-50%);
+	border-right: 3px solid var(--logo-registration-color);
+}
+
+nav.nav-head {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background: var(--nav-color);
+}
+
+nav.nav-head a{
+	padding: 0 8px;
+	margin: 0;
+	display: flex;
+	max-width: 80px;
+	overflow-wrap: anywhere;
+	flex-direction: column;
+	position: relative;
+	border-bottom: 3px solid var(--nav-color);
+}
+
+nav.nav-head a:hover{
+	border-bottom: 3px solid #fff;
+	background-color: var(--link-hover);
+}
+
+nav.nav-head a:active{
+	
+}
+
+nav.nav-head a span {
+	color: #fff;
+	width: 100%;
+	text-align: center;
+}
+
+/* Tooltip text */
+nav.nav-head a .tooltiptext {
+  visibility: hidden;
+  overflow-wrap: break-word;
+  width: 120px;
+  background-color: var(--nav-color);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text */
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  z-index: 1;
+}
+
+nav.nav-head a .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--nav-color) transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+nav.nav-head a:hover .tooltiptext {
+  	visibility: visible;
+}
+
+/*Main*/
+
+
+main {
+	overflow: hidden;
+    overflow-wrap: break-word;
+	background-color: #eee;
+	padding: 12px calc(50% - var(--main-width));
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: left;
+	align-content left;
+}
+
+main>* {
+	margin: 0 calc(50% - (var(--main-width) / 2)) !important;
+	max-width: var(--main-width) !important;
+}
+
+
+div.group {
+	background-color: #fff;
+	border-radius: 15px;
+	width: 100%;
+	display: flex;
+	max-width: 100%;
+	flex-wrap: wrap;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px;
+	justify-content: center;
+}
+
+div.product_group {
+	width: 100% !important;
+}
+
+div.category_group {
+	margin-bottom: 30px !important;
+	width: var(--main-width);
+	position: relative;
+	background-color: initial;
+	box-shadow: none;
+	justify-content: center;
+	overflow: hidden;
+}
+
+div.product_description {
+	border-radius: 15px;
+	display: flex;
+	padding: 15px;
+	flex-wrap: wrap;
+	flex-direction: column;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px;
+	width: 100%;
+	background-color: #fff;
+	transition: box-shadow 0.7s ease;
+}
+
+div.product_description:hover {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 20px 0px;
+	
+}
+
+div.product_description .title .category {
+	font-size: 12pt;
+	font-weight: 500;
+	font-family: 'Inter', sans-serif;
+	font-stretch: normal;
+	letter-spacing: auto;
+	color: var(--darkula);
+	position: absolute;
+	top: 0;
+	margin-left: 10px;
+}
+
+
+div.product_description .product_description_info {
+    max-width: 100%;
+}
+
+div.product_description .product_description_info .photo_block {
+	display: flex;
+}
+
+div.product_description .product_description_info .photo_block .image_product {
+	display: inline-block;
+	height: 400px;
+	margin-left: 10px; 
+}
+
+div.product_description .product_description_info .photo_text {
+	display: inline-block;
+	margin-bottom: auto;
+	margin-left: auto;
+	padding: 20px 20px;
+	font-weight: 700;
+	transition: 700ms;
+	display: flex;
+	flex-direction: column;
+}
+
+div.product_description .product_description_info .photo_text span.price {
+	font-size: 24pt;
+}
+
+div.product_description .product_description_info .photo_text a.to_basket{
+	margin: 10px 0;
+	border-radius: 5px;
+	background: var(--nav-color);
+	padding: 15px 7px;
+	cursor: pointer;
+	color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px;
+	transition: 500ms;
+}
+
+div.product_description .product_description_info .photo_text a.to_basket:hover {
+	box-shadow: rgba(0, 0, 0, 0.16) 00px 1px 20px 0px;
+}
+
+div.product_description .product_description_info .photo_text a.to_basket:active {
+	box-shadow: rgba(0, 0, 0, 0.5) 00px 1px 20px 0px;
+}
+
+div.product_description .product_description_info .description_text {
+	font-size: 16pt;
+	margin-top: 20px;
+	max-width: 100%;
+	text-indent: 20px; 
+	line-height: 18pt;
+	overflow-wrap: break-word;
+}
+
+.group_show {
+	margin-top: 10px !important;
+	margin-bottom: 30px !important;
+	margin: 0 200px;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px;
+	padding: 10px 0;
+	background: var(--nav-color);
+	color: #fff;
+	font-size: 14pt; 
+	transition: background 0.3s ease, color 0.1s linear; /*0.3s ease*/
+}
+
+.group_show:hover {
+	background: var(--nav-color-dark);
+}
+
+.group_show:active {
+	color: var(--light-white);
+}
+
+div.product_item {
+	display: inline-flex;
+	position: relative;
+	flex-direction: column;
+	max-width: 250px;
+	height: fit-content;
+	width: fit-content;
+	padding: 5px;
+}
+
+div.group div.product_item {
+    cursor: pointer;
+    transition: all 200ms ease;
+    
+}
+
+div.group div.product_item:hover {
+    transform: scale(1.05);
+}
+
+div.group div.product_item:active {
+    transform: scale(1);
+}
+
+div.group div.product_item_empty{
+	max-width: 100%;
+	padding: 30px 0;
+	cursor: default;
+}
+
+div.group div.product_item_empty:hover {
+	transform: none;
+}
+
+div.group div.product_item_empty:active {
+	transform: none;
+}
+
+div.group div.product_item_empty span {
+	font-size: 18pt;
+}
+
+
+div.category_group div.product_item {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px;
+	border-radius: 15px;
+	background: #fff;
+	margin: 10px 10px;
+	cursor: pointer;
+	transition: transform 0.3s ease !important; /*0.3s ease*/
+}
+
+div.category_group div.product_item.hide_block {
+	overflow: hidden;
+	height: 0;
+	padding-top: 0;	
+	padding-bottom: 0;	
+	margin: 0;
+}
+
+div.category_group div.product_item:hover {
+	transform: translate(0, -5px);
+}
+
+div.category_group div.product_item:active{
+	transform: translate(0, 5px);
+}
+
+div.product_item * {
+	max-width: 100%;
+	overflow-wrap: break-word !important;
+}
+
+div.product_item img.image_product{
+	width: 230px;
+	height: 130px;
+	object-fit: contain;
+	margin: 5px;
+}
+
+div.product_item .product_item_name {
+	color: black;
+	margin: 0 10px;
+}
+
+div.product_item .categoty_item_name {
+	color: black;
+	margin: 0 auto;
+}
+
+div.product_item .product_item_price {
+	text-align: right;
+	margin: 0 10px;
+}
+
+div.product_item .button_add_to_basket::after{
+	content: "";
+	cursor: pointer;
+	border-radius: 7px;
+	height: 30px;
+	width: 30px;
+	background:
+	    linear-gradient(#fff,#fff),
+	    linear-gradient(#fff,#fff),
+	    var(--nav-color);
+	background-position:center;
+	background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
+	background-repeat:no-repeat;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	position: absolute;
+}
+
+div.product_item .button_add_to_basket:hover:after {
+	background:
+	    linear-gradient(#fff,#fff),
+	    linear-gradient(#fff,#fff),
+	    var(--link-hover);
+	background-position:center;
+	background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
+	background-repeat:no-repeat;
+}
+
+div.product_item .button_add_to_basket:active:after {
+	transition: 750ms;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px 0px;
+}
+
+main .main-cities {
+	margin-top: 25px !important;
+	margin-bottom: 25px !important;
+	width: var(--main-width);
+}
+
+main .main-cities .main-cities-title {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 15px;
+	font-size: 14pt;
+}
+
+main .main-cities ul.main-cities-collumns{
+	max-height: 400px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+main .main-cities ul.main-cities-collumns li {
+	font-size: 12pt;
+	margin: 5px 0;
+	color: var(--dark-gray);
+	padding: 0;
+}
+
+main .main-cities ul.main-cities-collumns li a {
+	color: var(--darkula);
+	cursor: pointer;
+}
+
+main .main-cities ul.main-cities-collumns li a:hover {
+	color: #000;
+}
+
+main .title {
+	font-size: 18pt;
+	font-weight: 800;
+	font-family: 'Inter', sans-serif;
+	font-stretch: ultra-expanded;
+	letter-spacing: 1px;
+	color: var(--darkula);
+	margin-bottom: 15px !important;
+	position: relative;
+	width: fit-content;
+}
+
+/**/
+
+main .title *.admin_svg {
+	height: 38px;
+	cursor: pointer;
+	background: inherit;
+}
+
+/* Tooltip text */
+main .title *.admin_svg ~ .tooltiptext {
+	font-size: 12pt;
+	visibility: hidden;
+	overflow-wrap: break-word;
+	width: fit-content;
+	background-color: var(--darkula);
+	color: #fff;
+	letter-spacing: normal;
+	font-weight: 600;
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 6px;
+	/* Position the tooltip text */
+	position: absolute;
+	margin-left: -50px; /* Use half of the width (120/2 = 60), to center the tooltip */
+	z-index: 1;
+	top: 0;
+	right: -160px;
+}
+
+main .title *.admin_svg ~ .tooltiptext::after {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	right: 100%; /* To the left of the tooltip */
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent var(--darkula) transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+main .title *.admin_svg:hover ~ .tooltiptext,
+.tooltiptext {
+  	visibility: visible;
+}
+
+/**/ 
+
+footer {
+	overflow: hidden;
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer>* {
+	width: var(--main-width);
+}
+
+footer .main-footer {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    
+}
+
+footer .main-footer .logo {
+	height: 90px;
+	cursor: pointer;
+	margin-right: auto;
+}
+
+footer .main-footer .footer-links{
+	margin: 15px;
+	width: 100%;
+	display: block;
+}
+
+footer .main-footer .footer-links a {
+	color: black;
+}
+
+
+footer .main-footer .footer-links a:hover {
+	color: var(--american-river);
+}
+
+
+footer .footer-site-live {
+	text-align: center;
+	padding: 7px 0;
+	margin: 7px 0;
+	border-top: solid 1px var(--dark-gray);
+	color: var(--american-river);
+	font-size: 10pt;
+}
+
+.block_hidden_alert .alert {
+	display: none;
+}
+
+.block_alert {
+    width: 300px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 0;
+	right: 20px;
+}
+
+.block_alert .alert{
+	z-index: 100;
+}
+
+.block_alert .alert strong {
+    display: block;
+}
+
+.alert {
+	border-radius: 7px;	
+	border: 0;
+	padding: 20px;
+	background-color: var(--azmarin);
+	color: white;
+	opacity: 1;
+	transition: opacity 0.6s;
+	margin-bottom: 15px;
+	width: 100% !important;
+}
+
+.alert.success {background-color: var(--emerald);}
+.alert.info {background-color: var(--peter-reaver);}
+.alert.warning {background-color: var(--sun-flower);}
+
+/*
+    --ching-chong: #d63031;
+    --bright-yarrow: #fdcb6e;
+    --meant-leaf: #00b894;
+*/
+
+.alert .closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.alert .closebtn:hover {
+  color: black;
+}
+
+.menu {
+	width: 100%;
+	min-width: 200px;
+	right: 0;
+	display: inline-flex;
+	height: fit-content;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background: var(--logo-head-color);
+	margin-top: 50px; 
+	position: absolute;
+	bottom:0;
+	top: 0;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.58) 0px 1px 2px 0px;
+	z-index: 10;
+
+}
+
+.menu>*:not(hr) {
+	font-size: 13.5px !important;
+	background: transparent !important;
+	cursor: pointer;
+	color: var(--darkula) !important;
+	transition: 0ms;
+	margin: 0 !important;
+	padding: 8px 7px !important;
+	text-indent: 20px;
+	border-radius: 0 !important;
+}
+
+.menu>*:not(hr):hover {
+	background: var(--light-white) !important;
+}
+
+.menu>hr {
+	margin: 3px 10px;
+}
+
+/* помимо тех стилей что уже есть */
+.menu.hiding {
+  height: 0 !important;
+}
+
+input,
+textarea {
+	margin: 7px 0;
+	padding: 8px;
+	font-size: 14pt;
+	border: solid 1px var( --american-river);
+	border-radius: 5px;
+}
+
+input:focus,
+textarea:focus {
+	box-shadow: none;
+	border: none;
+	border: solid 1px var(--darkula);
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::placeholder {
+	color: var(--darkula) !important;
+}
+
+.input_group {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 10px 20px;
+	align-items: center;
+  	justify-content: center; 
+}
+
+.input_group input, 
+.input_group .input_disabled,
+.input_group div.custom-select,
+.input_group .input_label_checkbox {
+	width: calc(100% - 200px - 15px);
+	font-size: 14pt;
+	margin: 7px 0;
+}
+
+.input_group input::-webkit-input-placeholder {
+	font-style: italic;
+}
+
+.input_group button {
+	width: fit-content;
+	margin: 25px 0 5px auto;
+	padding: 8px 15px;
+	font-size: 14pt;
+	border-radius: 40px;
+	background-color: var(--nav-color);
+	color: white;
+	page-break-before: always;
+}
+
+.input_group button:hover {
+	background-color: var(--nav-color-hover);
+}
+
+.input_group .delete_button {
+	background-color: var(--azmarin);
+}
+
+.input_group .delete_button:hover {
+	background-color: var(--car-pink);
+}
+
+.input_group label.input_label {
+	max-width: 50%;
+
+	/* Other styling... */
+    text-align: right;
+    clear: both;
+    margin-right:15px;
+	font-size: 14pt;
+	width: 200px;
+}
+
+.input_group label.input_label::after {
+	content: "";
+	width: 100%;
+	position: relative;
+	border-bottom: 1px solid #000;
+}
+
+.input_group .group_button {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.input_group .group_button * {
+	margin: 15px 0 0 auto;
+}
+
+.input_group_button_list {
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+}
+
+.input_group_button_list>button {
+	width: 200px;
+	margin: 10px 0;
+}
+
+.input_group_button_list>button:active {
+	color: var(--light-white);
+}
+
+.group_group {
+	display: flex;
+	flex-direction: row;
+}
+
+.group_group>* {
+	align-self: stretch;
+}
+
+.group_group .group.group_product {
+	width: calc(var(--main-width) / 6 * 4);
+	margin-right: 20px;
+	display: block;
+}
+
+.group_group .group_right {
+	padding: 0!important;
+	width: calc(var(--main-width) / 6 * 2);
+}
+
+.group_group .group_right .group_map {
+	min-height: 400px;
+	width: 100%;
+}
+
+.group_group .group_right .group_map #map{
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	min-height: inherit;
+}
+
+.group_group .group_right .group_map #map button {
+	margin: 0;
+}
+
+.group_group .group_right .group_info {
+	margin: 15px 0 0;
+	flex-direction: column;
+	padding: 7px 8px;
+	align-items: normal;
+}
+
+.group_group .group_right .group_info .info_text{
+	margin: 0 15px;
+}
+
+.canlce_button {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  z-index: 3;
+  background: inherit;
+  border-radius: 100%;
+  border: 1px solid var(--darkula);
+}
+
+.canlce_button:hover {
+  opacity: 1;
+}
+.canlce_button:before, .canlce_button:after {
+  position: absolute;
+  top: 0;
+  content: ' ';
+  height: 28px;
+  width: 2px;
+  background-color: #333;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+.canlce_button:before {
+  transform: rotate(45deg);
+}
+.canlce_button:after {
+  transform: rotate(-45deg);
+}
+
+.executed_button {
+	width: 35px;
+  	height: 35px;
+}
+
+.executed_button:before {
+	height: 24px;
+	left: 22px;
+	top: 6px;
+	margin: initial;
+}
+
+.executed_button:after {
+	top: auto;
+	bottom: auto;
+	left: 10px;
+	height: 13px;
+	margin: initial;
+}
+
+/*.executed_button:before,
+.executed_button:after {
+	height: 0;
+  	width: 0;
+}*/
+
+.take_order__button:before {
+	transform: rotate(0deg);
+}
+
+.take_order__button:after {
+	transform: rotate(90deg);
+	height: 24px;
+}
+
+input[type="checkbox"] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+input[type="checkbox"]+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+input[type="checkbox"]+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+input[type="checkbox"]:checked+label::before {
+  border-color: #3498db;
+  background-color: #3498db;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили при наведении курсора на checkbox */
+input[type="checkbox"]:not(:disabled):not(:checked)+label:hover::before {
+  border-color: #b3d7ff;
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+input[type="checkbox"]:not(:disabled):active+label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+/* стили для чекбокса, находящегося в фокусе */
+input[type="checkbox"]:focus+label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+input[type="checkbox"]:focus:not(:checked)+label::before {
+  border-color: #80bdff;
+}
+/* стили для чекбокса, находящегося в состоянии disabled */
+input[type="checkbox"]:disabled+label::before {
+  background-color: #e9ecef;
+}
+
+.subtitle {
+	font-size: 16pt;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: var(--darkula);
+    margin-bottom: 15px !important;
+	padding: 25px 0 8px;
+	text-align: center;
+}

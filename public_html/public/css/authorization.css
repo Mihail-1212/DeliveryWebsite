@@ -1,0 +1,78 @@
+body {
+	background-color: transparent;
+}
+
+::-webkit-input-placeholder {
+	font-weight: bolder;
+	text-transform: uppercase;
+	font-size: 10pt;
+	color: var(--american-river);
+}
+
+.login-main {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	align-items: center;
+	margin: auto;
+	width: fit-content;
+	padding: 15px 35px;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px;
+}
+
+.login-main img {
+	display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.login-main .login-title {
+	font-size: 18pt;
+	text-transform: uppercase;
+	margin: 0 0 20px;
+	font-weight: bold;
+	color: var(--darkula);
+}
+
+.login-main button {
+	width: 100%;
+	margin: 25px 0 5px;
+	padding: 8px 5px;
+	font-size: 14pt;
+	border-radius: 40px;
+	background-color: var(--nav-color);
+	color: white;
+}
+
+.login-main button:hover {
+	background-color: var(--nav-color-hover);
+}
+
+.login-main a.login-link-refresh {
+	margin-top: 8px;
+	width: auto;
+	margin-right: auto;
+
+	text-align: right;
+}
+
+.input-group {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.input-group *:first-child {
+	display: inline-flex;
+	width: 20px;
+	background-color: #eee;
+	flex:1;
+
+}
+
+.input-group *:first-child * {
+	height: 20px;
+}
